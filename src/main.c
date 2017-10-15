@@ -17,5 +17,6 @@ int main(int argc, char *argv[])
     }
     printf("Memory allocated: %d\n", conf.memory);
 
-    initialize_vm();
+    vm_type *vm = malloc(sizeof(vm_type));
+    initialize_vm(vm);
 }
