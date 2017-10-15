@@ -4,7 +4,7 @@ INC=inc/
 
 EXE=hnvm
 
-FLAGS=-I$(INC) -g
+FLAGS=-I$(INC) -g -Wall
 
 all: $(OBJS)
 	$(CC) $(OBJS) $(FLAGS) -o $(EXE)
