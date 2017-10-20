@@ -21,6 +21,6 @@ int main(int argc, char *argv[])
 	conf.memory = 255;
     }
 
-    vm_type *vm = malloc(sizeof(vm_type) + conf.memory);
+    vm_type *vm = malloc(sizeof(vm_type) + conf.memory + 1);
     initialize_vm(vm);
 }
