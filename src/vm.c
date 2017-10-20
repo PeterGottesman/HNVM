@@ -10,7 +10,7 @@ int initialize_vm(vm_type *vm)
 	exit(1);
     }
     loop(vm);
-    destroy_vm(vm);
+    free_vm(vm);
     return 0;
 }
 
@@ -162,16 +162,8 @@ int vm_ldm(vm_type *vm, uint8_t dest, uint8_t val)
     return 0;
 }
 
-int destroy_vm(vm_type *vm)
+int free_vm(vm_type *vm)
 {
-    free_memory(vm);
-    exit(0);
-    return 0;
-}
-
-int free_memory(vm_type *vm)
-{
-    free(vm->memory);
-    printf("freed memory\n");
+    free(vm);
     return 0;
 }

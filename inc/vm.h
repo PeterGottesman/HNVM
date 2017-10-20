@@ -33,6 +33,5 @@ int vm_lda(vm_type *vm, uint8_t val);
 int vm_ldb(vm_type *vm, uint8_t val);
 int vm_ldc(vm_type *vm, uint8_t val);
 int vm_ldm(vm_type *vm, uint8_t dest, uint8_t val);
-int free_memory(vm_type *vm);
-int destroy_vm(vm_type *vm);
+int free_vm(vm_type *vm);
 #endif
