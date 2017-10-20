@@ -16,7 +16,7 @@ int initialize_vm(vm_type *vm)
 
 int allocate_memory(vm_type *vm)
 {
-    vm->memory = &vm->registers + sizeof(vm->registers);
+    vm->memory = (uint8_t *)(&vm->registers + sizeof(vm->registers));
     if (vm->memory == NULL) return 1;
     return 0;
 }
